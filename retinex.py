@@ -3,9 +3,6 @@ import cv2 as cv
 
 class Retinex(object):
 
-    def __init__(self, image):
-        self.image = image
-
     def get_ksize(self,sigma):
         return int(((sigma - 0.8) / 0.15) + 2.0)
 
