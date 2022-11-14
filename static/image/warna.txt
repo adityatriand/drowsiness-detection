@@ -1,9 +1,0 @@
-biru pertama: #EDF9FC
-biru kedua: #D1F4FA
-biru ketiga: #53CDE2
-
-hitam: #333333
-putih: #FFFFFF
-
-success: #99FF99
-fail: #990000
