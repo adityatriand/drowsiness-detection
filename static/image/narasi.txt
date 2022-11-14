@@ -1,0 +1,6 @@
+Drowsiness driver detection adalah sebuah web app dimana berguna untuk menjaga kamu agar terhindar dari kantuk saat berkendara
+
+Menggunakan model hasil machine learning metode CNN, membuat web app ini bisa mendeteksi apakah kamu sedang mengantuk atau tidak
+
+Jika sistem mendeteksi kamu mengantuk, sistem akan memberikan peringatan alarm kepada kamu
+
