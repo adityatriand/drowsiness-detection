@@ -1,0 +1,122 @@
+:root {
+    --blue1: #EDF9FC;
+    --blue2: #D1F4FA;
+    --blue3: #53CDE2;
+    --black: #333333;
+    --white: #FFFFFF;
+    --success: #99FF99;
+    --fail: #990000;
+    --font1: "roboto";
+    --font2: "montserrat";
+}
+
+/*Font*/
+@font-face {
+    font-family: 'roboto';
+    src: url('font/roboto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('font/montserrat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+    font-size: 14px;
+    color: var(--black);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--blue2);
+    margin: 0 auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 15px 0;
+}
+
+.navbar .nav-item .nav-link {
+    color: var(--white);
+    font-size: 25px;
+    background-color: var(--blue3);
+    border-radius: 10px;
+    width: 50px;
+    margin: 0 auto !important;
+}
+
+.main-menu{
+    position: absolute;
+    top: -20px;
+    font-size:30px !important;
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color: var(--blue3);
+    background-color: var(--blue1);
+}
+
+.head{
+    background-image:url('../image/bg-head.png');
+    background-size: cover;
+    height: 220px;
+}
+
+.content{
+    position:relative;
+    top:-20px;
+    height: 460px;
+    background-color: var(--white);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    overflow: auto;
+}
+
+.title-one{
+    font-family: var(--font2);
+    font-weight:bold;
+    text-align:center;
+    margin-top: 20px;
+}
+
+.title-two{
+    font-family: var(--font2);
+    font-weight:bold;
+    text-align:left;
+    margin-top: 20px;
+}
+
+.box-content{
+    background-color: var(--blue1);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.box-content.important{
+    background-color: var(--blue2);
+}
+
+.box-content.success{
+    background-color: var(--success);
+    font-weight:bold;
+}
+
+.box-content.fail{
+    background-color: var(--fail);
+    font-weight:bold;
+}
+
+.item-number{
+    font-size: 60px;
+    text-align: center;
+    color: var(--blue3);
+}

@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 
+{% block headimg %}
+    <img class="mt-5" src="{{ url_for('static', filename='image/car.png') }}" width="200">
+{% endblock %}
+
 {% block content %}
-    <h1>Face Detection</h1>
-    <img src="{{url_for('video')}}">
+    <div class="container">
+        <h4 class="title-one">Drowsiness Driver Detection</h4>
+        <div class="box-content important">
+            Drowsiness driver detection adalah sebuah web app dimana berguna untuk menjaga kamu agar terhindar dari kantuk saat berkendara
+        </div>
+        <h6 class="title-two">Keuntungan Aplikasi</h6>
+        <div class="box-content">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <img src="{{ url_for('static',filename='image/ai.png') }}" width="100">
+                </div>
+                <div class="col-8">
+                    Menggunakan model hasil machine learning metode CNN, membuat web app ini bisa mendeteksi apakah kamu sedang mengantuk atau tidak
+                </div>
+            </div>
+        </div>
+        <div class="box-content">
+            <div class="row">
+                <div class="col-8">
+                    Jika sistem mendeteksi kamu mengantuk, sistem akan memberikan peringatan alarm kepada kamu
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for('static',filename='image/alert-alarm.png') }}" width="100">
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
