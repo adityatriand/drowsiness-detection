@@ -13,6 +13,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-light d-none d-sm-block">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="{{ url_for('guideapp') }}"><i class="fa-solid fa-list"></i> How To Use</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="{{ url_for('detection') }}"><i class="fa-solid fa-circle-dot"></i> Detection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="{{ url_for('punishment') }}"><i class="fa-solid fa-gavel"></i> Punishment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="{{ url_for('tips') }}"><i class="fa-solid fa-lightbulb"></i> Tips</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="head">
       <div class="text-center">
         {% block headimg %}
@@ -20,6 +47,7 @@
         {% endblock %}
         </div>
     </div>
+
     <div class="container">
       <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom" id="navbar-footer">
         <ul class="navbar-nav nav-justified w-100 mx-4">
@@ -41,11 +69,13 @@
           </ul>
       </nav>
     </div>
+
     <div class="content">
         {% block content %}
 
         {% endblock %}
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}" ></script>
