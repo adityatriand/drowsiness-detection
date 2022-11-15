@@ -146,6 +146,7 @@
     .box-content.fail{
         background-color: var(--fail);
         font-weight:bold;
+        color: var(--white);
     }
 
     .box-content img{
@@ -275,6 +276,7 @@
     .box-content.fail{
         background-color: var(--fail);
         font-weight:bold;
+        color: var(--white);
     }
 
     .item-number{
