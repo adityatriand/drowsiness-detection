@@ -1,8 +1,12 @@
+import os
 import cv2 as cv
 import numpy as np
 from retinex import Retinex
 import pyttsx3
 from tensorflow.keras.models import load_model
+
+# os.environ["CUDA_DEVICE_ORDER"]= "PCI_BUS_ID"
+# os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 faceDetect = cv.CascadeClassifier('support/haarcascade_frontalface_default.xml')
 
