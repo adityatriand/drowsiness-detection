@@ -1,6 +1,7 @@
 from flask import Flask, render_template, Response, request
 from camera import Video
 import cv2 as cv
+import time
 
 app = Flask(__name__)
 
@@ -36,23 +37,23 @@ def detection():
         img.save('static/file.jpg', 0)
 
         image = cv.imread('static/file.jpg', cv.IMREAD_COLOR)
+        start = time.time()
         img_enh = Video().img_enh(image)
-        # img_enh = image
 
         faces = faceDetect.detectMultiScale(img_enh)
         if len(faces) != 1:
             faces = faceDetect.detectMultiScale(img_enh, 1.3, 5)
-        print(len(faces))
+
         if len(faces) != 0:
             (x, y, w, h) = faces[0]
             cropped = img_enh[y:y + h + 30, x:x + w + 30]
             predict = Video().drowsiness_face(cropped)
-        else:
-            predict = Video().drowsiness_face(img_enh)
-
-        for x, y, w, h in faces:
             cv.rectangle(img_enh, (x, y), (x + w, y + h), (255, 0, 255), 2)
             cv.putText(img_enh, predict, (x, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 255), 2)
+        else:
+            predict = Video().drowsiness_face(img_enh)
+        final_time = time.time() - start
+        print(final_time)
         cv.imwrite('static/file.jpg', img_enh)
 
     return render_template('detection.html', predict=predict)
